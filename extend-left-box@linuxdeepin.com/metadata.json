@@ -1,0 +1,7 @@
+{
+    "uuid": "extend-left-box@linuxdeepin.com",
+    "name": "Extend left box",
+    "description": "Extend _leftBox of gnome-shell top panel",
+    "shell-version": [ "3.2" ],
+    "url": "http://github.com/StephenPCG/extend-left-box"
+}
