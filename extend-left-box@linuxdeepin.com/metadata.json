@@ -2,6 +2,6 @@
     "uuid": "extend-left-box@linuxdeepin.com",
     "name": "Extend left box",
     "description": "Extend _leftBox of gnome-shell top panel",
-    "shell-version": [ "3.4", "3.6", "3.8" , "3.10", "3.12" ],
+    "shell-version": [ "3.4", "3.6", "3.8" , "3.10", "3.12", "3.14" ],
     "url": "http://github.com/StephenPCG/extend-left-box"
 }
