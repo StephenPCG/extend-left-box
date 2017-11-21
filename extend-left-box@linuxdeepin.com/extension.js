@@ -78,3 +78,5 @@ function enable() {
 function disable() {
     Main.panel.actor.disconnect(panelConnectId);
 }
+
+// testing
