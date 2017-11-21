@@ -50,20 +50,20 @@ function allocate(actor, box, flags) {
     }
     panel._rightBox.allocate(childBox, flags);
 
-    let [cornerMinWidth, cornerWidth] = panel._leftCorner.actor.get_preferred_width(-1);
-    let [cornerMinHeight, cornerHeight] = panel._leftCorner.actor.get_preferred_width(-1);
+    let [leftCornerMinWidth, leftCornerWidth] = panel._leftCorner.actor.get_preferred_width(-1);
+    let [leftcornerMinHeight, leftCornerHeight] = panel._leftCorner.actor.get_preferred_width(-1);
     childBox.x1 = 0;
-    childBox.x2 = cornerWidth;
+    childBox.x2 = leftCornerWidth;
     childBox.y1 = allocHeight;
-    childBox.y2 = allocHeight + cornerHeight;
+    childBox.y2 = allocHeight + leftCornerHeight;
     panel._leftCorner.actor.allocate(childBox, flags);
 
-    let [cornerMinWidth, cornerWidth] = panel._rightCorner.actor.get_preferred_width(-1);
-    let [cornerMinHeight, cornerHeight] = panel._rightCorner.actor.get_preferred_width(-1);
-    childBox.x1 = allocWidth - cornerWidth;
+    let [rightCornerMinWidth, rightCornerWidth] = panel._rightCorner.actor.get_preferred_width(-1);
+    let [rightCornerMinHeight, rightCornerHeight] = panel._rightCorner.actor.get_preferred_width(-1);
+    childBox.x1 = allocWidth - rightCornerWidth;
     childBox.x2 = allocWidth;
     childBox.y1 = allocHeight;
-    childBox.y2 = allocHeight + cornerHeight;
+    childBox.y2 = allocHeight + rightCornerHeight;
     panel._rightCorner.actor.allocate(childBox, flags);
 }
 
@@ -72,9 +72,11 @@ function init() {
 }
 
 function enable() {
-    panelConnectId = panel.actor.connect('allocate', allocate);
+    panelConnectId = panel.actor.connect('allocate', allocate);	
 }
 
 function disable() {
-    panel.actor.disconnect(panelConnectId);
+    Main.panel.actor.disconnect(panelConnectId);
 }
+
+// testing
